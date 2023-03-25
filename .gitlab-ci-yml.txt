@@ -1,5 +1,19 @@
-demo_job_1:
-  tags:
-    - ci
-  script:
-    - echo Hello World
+stages:
+    - build 
+    - test
+    - deploy
+
+Build Job:
+    stage: build
+    script:
+        - echo "This is the first build job"
+
+Test job:
+    stage: test
+    script:
+        - echo "This is the first test job"
+
+Deploy Job:
+    stage: deploy
+    script:
+        - echo "This is the first Deployment job"
